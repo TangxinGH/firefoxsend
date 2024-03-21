@@ -2,6 +2,8 @@
 
 [![CircleCI](https://img.shields.io/circleci/project/github/mozilla/send.svg)](https://circleci.com/gh/mozilla/send)
 
+2024/03/21 add qr function
+
 ## NOTICE - May 2021
 
 Mozilla discontinued the Firefox Send service in September 2021. For more information about this, please see the [Mozilla Blog](https://blog.mozilla.org/blog/2020/09/17/update-on-firefox-send-and-firefox-notes/).
