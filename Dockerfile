@@ -36,8 +36,8 @@ RUN set -x \
         --home /app \
         --uid 10001 \
         app
-RUN echo 'deb http://archive.debian.org/debian stretch main contrib non-free' > /etc/apt/sources.list        
-RUN apt-get update && apt-get -y install \
+RUN echo 'deb http://archive.debian.org/debian stretch main contrib non-free' > /etc/apt/sources.list    \
+    && apt-get update && apt-get -y install \
     git-core \
     && rm -rf /var/lib/apt/lists/*
 USER app
