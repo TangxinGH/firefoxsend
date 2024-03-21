@@ -1,6 +1,6 @@
 const html = require('choo/html');
 const { copyToClipboard } = require('../utils');
-
+const qr = require('./qr');
 module.exports = function(name, url) {
   const dialog = function(state, emit, close) {
     return html`
@@ -14,13 +14,23 @@ module.exports = function(name, url) {
           ${state.translate('copyLinkDescription')} <br />
           <span class="word-break-all">${name}</span>
         </p>
-        <input
-          type="text"
-          id="share-url"
-          class="w-full my-4 border rounded-lg leading-loose h-12 px-2 py-1 dark:bg-grey-80"
-          value="${url}"
-          readonly="true"
-        />
+        <div class="flex flex-row items-center justify-center w-full">
+          <input
+            type="text"
+            id="share-url"
+            class="block w-full my-4 border rounded-lg leading-loose h-12 px-2 py-1 dark:bg-grey-80"
+            value="${url}"
+            readonly="true"
+          />
+          <button
+            id="qr-btn"
+            class="w-16 m-1 p-1"
+            onclick="${toggleQR}"
+            title="QR code"
+          >
+            ${qr(url)}
+          </button>
+        </div>
         <button
           class="btn rounded-lg w-full flex-shrink-0 focus:outline"
           onclick="${copy}"
@@ -43,6 +53,18 @@ module.exports = function(name, url) {
       copyToClipboard(url);
       event.target.textContent = state.translate('copiedUrl');
       setTimeout(close, 1000);
+    }
+    function toggleQR(event) {
+      event.stopPropagation();
+      const shareUrl = document.getElementById('share-url');
+      const qrBtn = document.getElementById('qr-btn');
+      if (shareUrl.classList.contains('hidden')) {
+        shareUrl.classList.replace('hidden', 'block');
+        qrBtn.classList.replace('w-48', 'w-16');
+      } else {
+        shareUrl.classList.replace('block', 'hidden');
+        qrBtn.classList.replace('w-16', 'w-48');
+      }
     }
   };
   dialog.type = 'copy';

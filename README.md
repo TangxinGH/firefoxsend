@@ -59,14 +59,14 @@ Then, browse to http://localhost:8080
 
 ## Commands
 
-| Command          | Description |
-|------------------|-------------|
-| `npm run format` | Formats the frontend and server code using **prettier**.
-| `npm run lint`   | Lints the CSS and JavaScript code.
-| `npm test`       | Runs the suite of mocha tests.
-| `npm start`      | Runs the server in development configuration.
-| `npm run build`  | Builds the production assets.
-| `npm run prod`   | Runs the server in production configuration.
+| Command          | Description                                              |
+| ---------------- | -------------------------------------------------------- |
+| `npm run format` | Formats the frontend and server code using **prettier**. |
+| `npm run lint`   | Lints the CSS and JavaScript code.                       |
+| `npm test`       | Runs the suite of mocha tests.                           |
+| `npm start`      | Runs the server in development configuration.            |
+| `npm run build`  | Builds the production assets.                            |
+| `npm run prod`   | Runs the server in production configuration.             |
 
 ---
 
@@ -92,11 +92,11 @@ Pull requests are always welcome! Feel free to check out the list of ["good firs
 
 ## Testing
 
-| ENVIRONMENT | URL
-|-------------|-----
-| Production  | <https://send.firefox.com/>
-| Stage       | <https://stage.send.nonprod.cloudops.mozgcp.net/>
-| Development | <https://send2.dev.lcip.org/>
+| ENVIRONMENT | URL                                               |
+| ----------- | ------------------------------------------------- |
+| Production  | <https://send.firefox.com/>                       |
+| Stage       | <https://stage.send.nonprod.cloudops.mozgcp.net/> |
+| Development | <https://send2.dev.lcip.org/>                     |
 
 ---
 
@@ -115,5 +115,7 @@ The android implementation is contained in the `android` directory, and can be v
 ## License
 
 [Mozilla Public License Version 2.0](LICENSE)
+
+qrcode.js from https://github.com/kazuhikoarase/qrcode-generator licensed under MIT
 
 ---
