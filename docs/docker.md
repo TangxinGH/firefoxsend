@@ -4,16 +4,16 @@ Run `docker build -t send:latest .` to create an image or `docker-compose up` to
 
 ## Environment variables:
 
-| Name             | Description
-|------------------|-------------|
-| `PORT`           | Port the server will listen on (defaults to 1443).
-| `S3_BUCKET`  | The S3 bucket name.
-| `REDIS_HOST` | Host name of the Redis server.
-| `SENTRY_CLIENT` | Sentry Client ID
-| `SENTRY_DSN` | Sentry DSN
-| `MAX_FILE_SIZE` | in bytes (defaults to 2147483648)
-| `NODE_ENV`       | "production"
-| `BASE_URL`       | The HTTPS URL where traffic will be served (e.g. `https://send.firefox.com`)
+| Name            | Description                                                                  |
+| --------------- | ---------------------------------------------------------------------------- |
+| `PORT`          | Port the server will listen on (defaults to 1443).                           |
+| `S3_BUCKET`     | The S3 bucket name.                                                          |
+| `REDIS_HOST`    | Host name of the Redis server.                                               |
+| `SENTRY_CLIENT` | Sentry Client ID                                                             |
+| `SENTRY_DSN`    | Sentry DSN                                                                   |
+| `MAX_FILE_SIZE` | in bytes (defaults to 2147483648)                                            |
+| `NODE_ENV`      | "production"                                                                 |
+| `BASE_URL`      | The HTTPS URL where traffic will be served (e.g. `https://send.firefox.com`) |
 
 ## Example:
 
